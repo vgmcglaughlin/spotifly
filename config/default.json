@@ -1,0 +1,15 @@
+{
+  "express": {
+    "middleware": ["express-static", "cookie-parser"]
+  },
+
+  "express-static": {
+    "www": "public"
+  },
+
+  "cookie-parser": {
+    "options": {}
+  },
+
+  "spotify": {}
+}

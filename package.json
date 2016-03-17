@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/vgmcglaughlin/spotifly#readme",
   "dependencies": {
-    "blueoak-server": "^2.1.5"
+    "blueoak-server": "^2.1.5",
+    "cookie-parser": "^1.4.1"
   }
 }
