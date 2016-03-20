@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="small-12 columns">
+    <label>
+      Reverse order
+      <input type="checkbox" ng-model="vm.reverseOrder" ng-change="vm.updateOrder()">
+    </label>
+  </div>
+</div>
+
+<div class="row align-middle" ng-repeat="track in vm.tracks | orderBy:track_number">
+  <div class="small-12 columns">
+    <span ng-bind="track.track_number"></span>
+    <span ng-bind="track.name"></span>
+  </div>
+</div>
+
+<iframe ng-attr-src="{{ vm.playlistUri }}" frameborder="0" allowtransparency="true"></iframe>

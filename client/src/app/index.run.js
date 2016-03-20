@@ -2,13 +2,18 @@
   'use strict';
 
   angular
-    .module('client')
+    .module('app')
     .run(runBlock);
 
   /** @ngInject */
-  function runBlock($log) {
-
+  function runBlock($log, Spotify, $state) {
     $log.debug('runBlock end');
-  }
 
+    Spotify.getCurrentUser().then(function (user) {
+      $log.debug('current user', user);
+    }).catch(function (err) {
+      $log.debug('error getting current user', err);
+      $state.go('login');
+    });
+  }
 })();

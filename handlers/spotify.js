@@ -38,6 +38,7 @@ exports.init = function (app, config) {
   var redirect_uri = spotifyConfig.redirectUri;
 
   app.get('/login', function(req, res) {
+    console.log('/login called');
 
     var state = generateRandomString(16);
     res.cookie(stateKey, state);
