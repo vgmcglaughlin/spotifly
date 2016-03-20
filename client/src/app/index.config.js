@@ -6,7 +6,7 @@
     .config(config);
 
   /** @ngInject */
-  function config($logProvider, SpotifyProvider, $sceDelegateProvider) {
+  function config($logProvider, SpotifyProvider) {
     // Enable log
     $logProvider.debugEnabled(true);
 

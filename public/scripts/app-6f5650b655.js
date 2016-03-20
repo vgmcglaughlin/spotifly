@@ -162,13 +162,13 @@
 (function (window) {
   'use strict';
 
-  config.$inject = ["$logProvider", "SpotifyProvider", "$sceDelegateProvider"];
+  config.$inject = ["$logProvider", "SpotifyProvider"];
   angular
     .module('app')
     .config(config);
 
   /** @ngInject */
-  function config($logProvider, SpotifyProvider, $sceDelegateProvider) {
+  function config($logProvider, SpotifyProvider) {
     // Enable log
     $logProvider.debugEnabled(true);
 
@@ -199,4 +199,4 @@
 angular.module("app").run(["$templateCache", function($templateCache) {$templateCache.put("app/albums/album.html","<div class=\"row\"><div class=\"small-12 columns\"><label>Reverse order <input type=\"checkbox\" ng-model=\"vm.reverseOrder\" ng-change=\"vm.updateOrder()\"></label></div></div><div class=\"row align-middle\" ng-repeat=\"track in vm.tracks | orderBy:track_number\"><div class=\"small-12 columns\"><span ng-bind=\"track.track_number\"></span> <span ng-bind=\"track.name\"></span></div></div><div class=\"row\"><div class=\"small-12 columns\"><iframe ng-attr-src=\"{{ vm.playlistUri }}\" frameborder=\"0\" allowtransparency=\"true\"></iframe></div></div>");
 $templateCache.put("app/login/login.html","<div class=\"row\"><div class=\"small-12 columns\"><a href=\"/login\" class=\"primary button\">Log in with Spotify</a></div></div>");
 $templateCache.put("app/main/main.html","<div class=\"row\"><div class=\"small-12 columns\"><form novalidate=\"\" name=\"vm.searchForm\" ng-submit=\"vm.search(vm.params)\"><label>Album Name <input type=\"text\" ng-model=\"vm.params.query\" ng-change=\"vm.search(vm.params)\" ng-model-options=\"{debounce: 300}\"></label></form></div><div><div class=\"row align-middle\" ng-repeat=\"item in vm.items\" ui-sref=\"album({id: item.id})\"><div class=\"small-3 medium-2 large-1 columns\"><img ng-src=\"{{ item.images[0].url }}\"></div><div class=\"small-9 medium-10 large-11 columns\"><span ng-bind=\"item.name\"></span></div></div></div></div>");}]);
-//# sourceMappingURL=../maps/scripts/app-a4998f699c.js.map
+//# sourceMappingURL=../maps/scripts/app-6f5650b655.js.map
